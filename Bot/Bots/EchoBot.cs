@@ -41,7 +41,7 @@ namespace Bot.Bots
 					userProfile.Name = turnContext.Activity.Text?.Trim();
 
 					// Acknowledge that we got their name
-					await turnContext.SendActivityAsync(MessageFactory.Text(String.Format($"Thanks {userProfile.Name}")), cancellationToken);
+					await turnContext.SendActivityAsync(MessageFactory.Text(String.Format($"Thanks {userProfile.Name}.  How can I help you today ?")), cancellationToken);
 
 					// Reset the flag to allow the bot to go through the cycle again
 					conversationData.PromptedUserForName = false;
